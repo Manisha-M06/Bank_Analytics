@@ -3,12 +3,7 @@ component: build
 steps:
 
   - type: Command
-    name: Install Maven
-    command: |
-      yum install -y maven
-
-  - type: Command
-    name: Build
+    name: Install Dependencies
     command: |
       mvn clean install -DskipTests
 
