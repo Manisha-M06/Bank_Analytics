@@ -1,0 +1,17 @@
+version: 0.1
+component: build
+steps:
+  - type: Command
+    name: Install Dependencies
+    command: |
+      mvn clean install -DskipTests
+
+  - type: Command
+    name: Regression Testing
+    command: |
+      mvn test
+
+  - type: Command
+    name: Package
+    command: |
+      mvn package
